@@ -1,38 +1,96 @@
+@font-face {
+  font-family: 'Dotrice Regular';
+  src: url('./assets/fonts/dotrice.regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #00b894;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.App-header-text {
+  font-family: 'Pacifico', cursive;
+  font-size: calc(15px + 2vmin);
+  font-style: italic;
+  color: #e6fdf9;
+  margin-top: -3px;
+  transform: rotate(-3deg) scaleY(0.75);
+}
+
+.input-container {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-input {
+  width: 85%;
+  padding: 5px;
+  font-size: 1.4em;
+  color: #886950;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.155), 0px -2px 4px rgba(0, 0, 0, 0.155);
+}
+
+.add-button {
+  background-color: #00b894;
+  /* Set the background color to match the theme */
   color: white;
+  /* Set the text color to white */
+  padding: 0px 5px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+  /* Set the border color to a lighter greyish version of the background color */
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.155), 0px -2px 4px rgba(0, 0, 0, 0.155);
+  /* Add this line to create a symmetrical floating effect */
 }
 
-.App-link {
-  color: #61dafb;
+.add-button::before {
+  content: '+';
+  font-size: 2.1em;
+  /* Larger font size for the + sign */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shopping-list-container {
+  margin-top: 10px;
+}
+
+.shopping-list-separator {
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #c99462;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shopping-list-separator-text {
+  color: #faf6e1;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-family: "Dotrice Regular";
+  letter-spacing: 2px;
+  margin-top: 5px;
 }

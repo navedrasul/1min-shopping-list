@@ -1,0 +1,56 @@
+.shopping-list-item {
+    margin: 20px 10px;
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.219), 0px -2px 4px rgba(0, 0, 0, 0.219);
+}
+
+.shopping-list-item-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 1.4em;
+    color: #886950;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: left;
+}
+
+.shopping-list-item-remove,
+.shopping-list-item-edit {
+    background-color: #00b894;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+    cursor: pointer;
+    margin-left: 10px;
+    /* Ensure spacing between buttons */
+}
+
+.shopping-list-item-remove {
+    padding: 2px 7px;
+}
+
+.shopping-list-item-edit {
+    padding: 2px 2px;
+}
+
+.shopping-list-item-remove:hover,
+.shopping-list-item-edit:hover {
+    background-color: darkred;
+}
+
+.shopping-list-item-remove::before {
+    content: 'x';
+    font-size: 1.9em;
+}
+
+.shopping-list-item-edit::before {
+    content: '✎';
+    /* Unicode for pencil icon */
+    font-size: 1.65em;
+}
