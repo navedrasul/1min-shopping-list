@@ -5,6 +5,18 @@ export class ShoppingList {
   [immerable] = true;
   private items: ShoppingListItem[] = [];
 
+  constructor(items: ShoppingListItem[] = []) {
+    this.items = items;
+  }
+
+  setItems(items: ShoppingListItem[]): void {
+    this.items = items;
+  }
+
+  addItems(items: ShoppingListItem[]): void {
+    this.items.push(...items);
+  }
+
   addItem(item: ShoppingListItem): void {
     this.items.push(item);
   }
