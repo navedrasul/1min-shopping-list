@@ -35,18 +35,18 @@ function App() {
     if (inputRef.current !== null && inputRef.current.value && inputRef.current.value.trim() !== '') {
       const newValue = inputRef.current.value.trim();
       const newItem = new ShoppingListItem(newValue);
-      
+
       // Use produce to create the new state and update it
       const newState = produce(shoppingList, draft => {
         draft.addItem(newItem);
       });
-  
+
       // Update the state
       setShoppingList(newState);
-  
+
       // Clear the input field
       inputRef.current.value = '';
-  
+
       // Call saveShoppingList with the updated state
       saveShoppingList(newState.getItems());
     }
@@ -60,15 +60,15 @@ function App() {
       const newState = produce(shoppingList, draft => {
         draft.removeItem(key);
       });
-  
+
       // Update the state
       setShoppingList(newState);
-  
+
       // Call saveShoppingList with the updated state
       saveShoppingList(newState.getItems());
     }
   };
-  
+
   const editItem = (item: ShoppingListItem) => {
     const key = item.key;
     const newName = prompt("Edit item name:", item.name);
@@ -77,14 +77,31 @@ function App() {
       const newState = produce(shoppingList, draft => {
         draft.editItem(key, newName.trim());
       });
-  
+
       // Update the state
       setShoppingList(newState);
-  
+
       // Call saveShoppingList with the updated state
       saveShoppingList(newState.getItems());
     }
   };
+
+  const clearList = () => {
+    const confirmClear = window.confirm('Are you sure you want to clear the list?');
+    if (confirmClear) {
+      // Use produce to create the new state and update it
+      const newState = produce(shoppingList, draft => {
+        draft.clearItems();
+      });
+
+      // Update the state
+      setShoppingList(newState);
+
+      // Call saveShoppingList with the updated state
+      saveShoppingList(newState.getItems());
+    }
+  }
+
   const handleKeyUp = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       addItem();
@@ -114,6 +131,7 @@ function App() {
         </span>
       </div>
       <ShoppingListComponent shoppingList={shoppingList} onRemove={removeItem} onEdit={editItem} />
+      <button className="clear-list-button" onClick={clearList}></button>
     </div>
   );
 }
