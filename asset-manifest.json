@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/your-repo-name/static/css/main.4dc1b21c.css",
-    "main.js": "/your-repo-name/static/js/main.e9d03865.js",
-    "static/js/453.adc6d8f6.chunk.js": "/your-repo-name/static/js/453.adc6d8f6.chunk.js",
-    "static/media/dotrice.regular.otf": "/your-repo-name/static/media/dotrice.regular.ff691264588bb38d2b5f.otf",
-    "index.html": "/your-repo-name/index.html",
-    "main.4dc1b21c.css.map": "/your-repo-name/static/css/main.4dc1b21c.css.map",
-    "main.e9d03865.js.map": "/your-repo-name/static/js/main.e9d03865.js.map",
-    "453.adc6d8f6.chunk.js.map": "/your-repo-name/static/js/453.adc6d8f6.chunk.js.map"
+    "main.css": "/1min-shopping-list/static/css/main.a7a23d06.css",
+    "main.js": "/1min-shopping-list/static/js/main.068e1fcc.js",
+    "static/js/453.adc6d8f6.chunk.js": "/1min-shopping-list/static/js/453.adc6d8f6.chunk.js",
+    "static/media/dotrice.regular.otf": "/1min-shopping-list/static/media/dotrice.regular.ff691264588bb38d2b5f.otf",
+    "index.html": "/1min-shopping-list/index.html",
+    "main.a7a23d06.css.map": "/1min-shopping-list/static/css/main.a7a23d06.css.map",
+    "main.068e1fcc.js.map": "/1min-shopping-list/static/js/main.068e1fcc.js.map",
+    "453.adc6d8f6.chunk.js.map": "/1min-shopping-list/static/js/453.adc6d8f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4dc1b21c.css",
-    "static/js/main.e9d03865.js"
+    "static/css/main.a7a23d06.css",
+    "static/js/main.068e1fcc.js"
   ]
 }
