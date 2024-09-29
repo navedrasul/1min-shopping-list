@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/your-repo-name/static/css/main.4dc1b21c.css",
+    "main.js": "/your-repo-name/static/js/main.e9d03865.js",
+    "static/js/453.adc6d8f6.chunk.js": "/your-repo-name/static/js/453.adc6d8f6.chunk.js",
+    "static/media/dotrice.regular.otf": "/your-repo-name/static/media/dotrice.regular.ff691264588bb38d2b5f.otf",
+    "index.html": "/your-repo-name/index.html",
+    "main.4dc1b21c.css.map": "/your-repo-name/static/css/main.4dc1b21c.css.map",
+    "main.e9d03865.js.map": "/your-repo-name/static/js/main.e9d03865.js.map",
+    "453.adc6d8f6.chunk.js.map": "/your-repo-name/static/js/453.adc6d8f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dc1b21c.css",
+    "static/js/main.e9d03865.js"
+  ]
+}
