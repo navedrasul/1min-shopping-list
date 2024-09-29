@@ -28,8 +28,23 @@ export class ShoppingList {
     }
   }
 
+  toggleItemPurchased(key: string): void { // Add this method
+    const item = this.items.find((item) => item.key === key);
+    if (item) {
+      item.purchased = !item.purchased;
+    }
+  }
+
+  purchasedItemsCount(): number {
+    return this.items.filter((item) => item.purchased).length;
+  }
+
   getItems(): ShoppingListItem[] {
     return this.items;
+  }
+
+  getSortedItems(): ShoppingListItem[] { // Add this method
+    return this.items.slice().sort((a, b) => Number(a.purchased) - Number(b.purchased));
   }
 
   removeItem(key: string): void {
