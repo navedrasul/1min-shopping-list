@@ -24,7 +24,7 @@
     background-color: #00b894;
     color: white;
     font-size: 1em;
-    border-radius: 5px;
+    border-radius: 11px;
     border: 1px solid #d8d8d8;
     cursor: pointer;
     margin-left: 10px;
@@ -32,7 +32,7 @@
 }
 
 .shopping-list-item-remove {
-    padding: 2px 7px;
+    padding: 2px 8px;
 }
 
 .shopping-list-item-edit {
@@ -41,16 +41,16 @@
 
 .shopping-list-item-remove:hover,
 .shopping-list-item-edit:hover {
-    background-color: darkred;
+    background-color: #007d64;
 }
 
 .shopping-list-item-remove::before {
     content: 'x';
-    font-size: 1.9em;
+    font-size: 2.23em;
 }
 
 .shopping-list-item-edit::before {
     content: '✎';
     /* Unicode for pencil icon */
-    font-size: 1.65em;
+    font-size: 1.9em;
 }

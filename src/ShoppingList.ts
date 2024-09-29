@@ -9,6 +9,10 @@ export class ShoppingList {
     this.items = items;
   }
 
+  length(): number {
+    return this.items.length;
+  }
+
   setItems(items: ShoppingListItem[]): void {
     this.items = items;
   }
@@ -36,7 +40,7 @@ export class ShoppingList {
     this.items = this.items.filter((item) => item.key !== key);
   }
 
-  length(): number {
-    return this.items.length;
+  clearItems(): void {
+    this.items = [];
   }
 }
