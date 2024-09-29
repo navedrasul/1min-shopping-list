@@ -19,6 +19,18 @@
     text-align: left;
 }
 
+.shopping-list-item.purchased .shopping-list-item-text {
+  text-decoration: line-through;
+  color: #d3d3d3; /* Lighter color for purchased items */
+}
+
+.shopping-list-item-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
 .shopping-list-item-remove,
 .shopping-list-item-edit {
     background-color: #00b894;

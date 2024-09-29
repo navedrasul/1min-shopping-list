@@ -108,6 +108,20 @@ function App() {
     }
   };
 
+  const toggleItemPurchased = (item: ShoppingListItem) => {
+    const key = item.key;
+    // Use produce to create the new state and update it
+    const newState = produce(shoppingList, draft => {
+      draft.toggleItemPurchased(key);
+    });
+
+    // Update the state
+    setShoppingList(newState);
+
+    // Call saveShoppingList with the updated state
+    saveShoppingList(newState.getItems());
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -127,10 +141,15 @@ function App() {
       </div>
       <div className='shopping-list-separator'>
         <span className='shopping-list-separator-text'>
-          {shoppingList.length()} items
+          <b>{shoppingList.purchasedItemsCount()}</b> purchesed out of <b>{shoppingList.length()}</b> items
         </span>
       </div>
-      <ShoppingListComponent shoppingList={shoppingList} onRemove={removeItem} onEdit={editItem} />
+      <ShoppingListComponent
+        shoppingList={shoppingList}
+        onRemove={removeItem}
+        onEdit={editItem}
+        onTogglePurchased={toggleItemPurchased}
+      />
       <button className="clear-list-button" onClick={clearList}></button>
     </div>
   );

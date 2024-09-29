@@ -4,8 +4,10 @@ import { immerable } from "immer";
 export class ShoppingListItem {
   [immerable] = true;
   public key: string;
+  purchased: boolean;;
 
   constructor(public name: string) {
     this.key = uuidv4();
+    this.purchased = false;
   }
 }
